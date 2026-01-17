@@ -5,7 +5,7 @@ import { authAPI } from '../services/api';
 interface AuthContextType {
   user: User | null;
   token: string | null;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<User>;
   register: (email: string, password: string, role?: string, adminCode?: string) => Promise<void>;
   logout: () => void;
   isAdmin: () => boolean;
